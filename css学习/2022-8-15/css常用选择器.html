@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            标签选择器：根据标签名来选中指定的元素
+            语法：标签名{}
+            例子：h{}  p{}...
+        */
+        p{
+            color: red;
+        }
+
+        /* 
+            id选择器：根据元素的id属性属性值来选中一个元素（唯一性）
+            语法：#id属性值{}
+            例子：#green{}
+        
+        */
+        #green{
+            color: green;
+        }
+
+        /* 
+            类选择器：根据元素的class属性值来选中一组元素（可以重复使用）  
+            语法：.class属性值{}
+            例子：.blue{}
+            可以为一个元素指定多个class属性，属性之间用空格连接
+            例子：
+        */
+        .blue{
+            color: blue;
+        }
+        .yellow{
+            color: yellow;
+        }
+
+        /* 
+            通配选择器：选中页面中的所有元素
+            语法：*{}
+        */
+        *{
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <p>少小离家老大回，乡音无改鬓毛衰</p>
+    <p id="green">少小离家老大回，乡音无改鬓毛衰</p>
+    <p class="blue">少小离家老大回，乡音无改鬓毛衰</p>
+    <p class="blue yellow">少小离家老大回，乡音无改鬓毛衰</p>
+    <p>少小离家老大回，乡音无改鬓毛衰</p>
+</body>
+</html>
