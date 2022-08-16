@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            :link 用来表示没有访问过的超链接（正常的链接）        
+        */
+        a:link{
+            color: red;
+        }
+
+        /* 
+            :visited  用于表示访问过的链接
+            由于隐私原因，该选择器只能修改颜色
+        */
+        a:visited{
+            color: green;
+        }
+
+        /* 
+            :hover  用来表示鼠标移入的状态      
+        */
+        a:hover{
+            color: gray;
+        }
+
+        /* 
+            :active  用来表示鼠标点击的状态
+        */
+        a:active{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="https://www.baidu.com">访问过的超链接</a>
+    <a href="https://www.baidu123.com/:">没访问过的超链接</a>
+
+</body>
+</html>

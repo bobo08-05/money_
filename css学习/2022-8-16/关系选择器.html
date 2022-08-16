@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+        /* 
+            子元素选择器：选中父元素下的指定子元素选择器
+            语法：父元素选择器 > 子元素选择器{}
+        */
+        div.red > p{
+            color: red ;
+        }
+
+        /* 
+            后代选择器：选中祖先选择器中的指定后代选择器
+            语法：祖先 后代{}
+        */
+        div span{
+            color: blue;
+        }
+
+        /* 
+            兄弟元素选择器：选中同一级元素选择器中的指定选择器
+            靠前的为兄元素，后面的为弟元素
+            1、选择下一个兄弟元素：
+                语法：兄 + 弟
+            2、选择后面的所有兄弟元素：
+                语法：兄 ~ 弟
+        */
+        p + span{
+            color: orange;
+        }
+
+        /* span + span{
+            color: aqua;
+            和span ~ span效果相同
+        } */
+
+        h1 ~ p{
+            color: aqua;
+        }
+    </style>
+<body>
+    <div class="red">
+        我是div
+        <p>
+            我是div中的p
+            <span>
+                我是p中的span
+            </span>
+        </p>
+        <span>我是div中的span</span>
+    </div>
+    <div>
+        我是没有类选择器的div
+        <p>我是没有类选择器的div下的p</p>
+        <span>我是没有类选择器的div下的span</span>
+    </div>
+    <h1>标题</h1>
+    <p>pppppppppp</p>
+    <p>ppppp</p>
+    <p>ppppppp</p>
+    <p>ppppppp</p>
+    <span>我是span标签</span>
+    <span>我是span标签</span>
+    <span>我是span标签</span>
+    <span>我是span标签</span>
+    <span>我是span标签</span>
+    <span>我是span标签</span>
+</body>
+</html>

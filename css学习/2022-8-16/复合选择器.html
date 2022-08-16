@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            交集选择器：选中同时符合多个选择器条件的元素
+            语法：选择器1选择器2选择器n{}
+            如果有标签选择器，标签选择器必须使用元素选择器开头
+        */
+        .red{
+            color: red;
+        }
+        
+        div.red{
+            font-size: 20px;
+        }
+
+        .red.a.b{
+            color: green;
+        }
+        /* 
+            并集选择器：同时选择多个符合相应选择器的元素
+            语法：选择器,选择器,选择器,选择器{}   选择器之间以逗号隔开
+        */
+
+        h1,span{
+            color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <div class="red">我是div</div>
+    <p class="red">我是p</p>
+    <div class="red a b ">我是选择器为多个的div</div>
+    <h1>标题</h1>
+    <span>少小离家老大回，乡音无改鬓毛衰</span>
+</body>
+</html>
