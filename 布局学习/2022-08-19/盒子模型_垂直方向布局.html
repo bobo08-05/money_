@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 400px;
+            height: 200px;
+            background-color: #bfa;
+
+            /* 
+                默认父元素的高度被内容撑开
+
+               子元素是在父元素的内容区中排列的，
+                    如果子元素的大小超过了父元素，则子元素会从父元素中溢出
+                    使用overflow属性来设置父元素如何处理溢出的子元素
+                    可选值:
+                    visible，默认值 子元素会从父元素中溢出，在父元素外部的位置显示 
+                    hidden 溢出内容将会被裁剪不会显示
+                    scroll 生成两个滚动条，通过滚动条来查看完整的内容 
+                    auto 根据需要生成滚动条
+                    overflow-x: 设置水平方向的溢出
+                    overflow-y: 设置垂直方向的溢出
+             */
+             overflow-y: hidden;
+        }
+
+        .box1{
+            width: 200px;
+            height: 100px;
+            background-color: orange;
+            margin-bottom: 50px;
+        }
+
+        .box2{
+            width: 200px;
+            height: 100px;
+            background-color: green;
+        }        
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="box1">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim optio possimus soluta nulla! Vel dolorem in illo totam dolore officia, nostrum quod voluptate provident quam perferendis corrupti perspiciatis nam est?
+        </div>
+        <!-- <div class="box2"></div> -->
+    </div>
+</body>
+</html>

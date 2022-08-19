@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+        /* 
+        大部分标签选择器的样式会被它的后代选择器继承
+        但是想背景相关，布局相关等样式不会被继承
+        */
+        div{
+            color: red;
+            background-color: green;
+        }
+    </style>
+<body>
+    <div>
+        我是div标签
+        <p>我是div标签里的p标签</p>
+    </div>
+</body>
+</html>
