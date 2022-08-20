@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        a{
+            text-decoration: none;
+            color: #333;
+        }
+        .news_box{
+            width: 250px;
+            border-top: 1px #aaa solid;
+            margin: 10px 0;
+        }
+        .news_box h2{
+            display: inline-block;
+            font-size: 25px;
+            margin-top: -1px;
+            border-top: 1px red solid;
+            padding-bottom: 10px;
+        }
+        .news_box a:hover{
+            color: red;
+        }
+        .box_item{
+            width: 250px;
+            height: 150px;
+        }
+        img{
+            width: 250px;
+        }
+        .title{
+            color: aliceblue;
+            font-size: 14px;
+            margin-top: -30px;
+            padding-left: 10px;
+        }
+        .title:hover{
+            color:red;
+        }
+        ul{
+            height: 200px;
+            margin-top: 10px;
+            font-size: 12px;
+        }
+        li{
+            margin-bottom: 5px;
+        }
+        li::before{
+            content: "■";
+            color: rgb(219, 216, 216);
+            font-size: 14px;
+        }
+        li a{
+            padding-left: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="news_box">
+        <h2>
+            <a href="#">体育</a>
+        </h2>
+        <div class="box_item">
+            <a href="#">
+                <img src="./练习图片素材/9.PNG" alt="">
+                <h3 class="title">费德勒首负迪米 扶额摇头不满发挥</h3>
+            </a>
+        </div>
+        <ul>
+            <li>
+                <a href="#">乔治：我爱LA喜欢和LBJ一起打球</a>
+            </li>
+            <li>
+                <a href="#">乔治：我爱LA喜欢和LBJ一起打球</a>
+            </li>
+            <li>
+                <a href="#">乔治：我爱LA喜欢和LBJ一起打球</a>
+            </li>
+            <li>
+                <a href="#">乔治：我爱LA喜欢和LBJ一起打球</a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

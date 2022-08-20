@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            元素设置浮动以后，将会从文档流中脱离，从文档流中脱离后，元素的一些特点也会
+
+                脱离文档流的特点:  ！！！！！！！（不仅限于float属性，所以会使元素脱离文档流的属性通用）
+                块元素:
+                1、块元素不在独占页面的一行
+                2、脱离文档流以后，块元素的宽度和高度默认都被内容撑开
+
+                行内元素:
+                行内元素脱离文档流以后会变成块元素，特点和块元素一样
+
+                脱离文档流以后，不需要再区分块和行内了！！！
+        */
+        .box1{
+            width: 100px;
+            height: 100px;
+            background-color: olivedrab;
+            float: left;
+        }
+        .box2{
+            background-color: orange;
+            float: left;
+        }
+        span{
+            width: 100px;
+            height: 100px;
+            background-color: yellowgreen;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="box1"></div>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi voluptatem exercitationem perspiciatis ex aut amet vitae iste pariatur unde? Accusantium distinctio tempora voluptatibus, impedit quisquam labore maxime magni cumque animi.</p> -->
+        <div class="box2">hello</div>
+        <div class="box3">hoad</div>
+        <span>我是span</span>
+</body>
+</html>
