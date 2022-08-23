@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 600px;
+            border: 1px red solid;
+
+            /* 
+                text-align 设置文本水平方向对齐方式
+                    可选值：
+                    left 向左对齐
+                    right 向右对齐
+                    center 居中对齐
+                    justify 两端对齐
+            */
+            text-align: justify;
+        }
+        /* p{
+            border: 1px red solid;
+            font-size: 30px;
+        } */
+        span{
+            border: 1px black solid;
+            font-size: 20px;
+
+            /* 
+                vertical-align  设置文本垂直方向对齐方式
+                    可选值：
+                    baseline 基线对齐（默认值）
+                    top  顶部对齐
+                    bottom  底部对齐
+                    middle  居中对齐（不能完全居中对齐）
+            */
+            vertical-align: top;
+        }
+
+        p{
+            border: 1px red solid;
+        }
+        p img{
+            /* 
+            引入图片会有缝隙，可以使用vertical-align去除缝隙（除默认属性都可）
+            */
+            vertical-align: bottom;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur incidunt porro perferendis in fuga autem quas excepturi voluptatum nisi, vero odio blanditiis fugiat. Libero dolorem pariatur dicta voluptatibus est perferendis.
+    </div> -->
+
+    <!-- <p>今天天气真好！<span>hello!</span></p> -->
+
+    <p>
+        <img src="../../exercise/练习图片素材/10.PNG" alt="">
+    </p>
+</body>
+</html>

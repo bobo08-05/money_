@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .img_list{
+            width: 600px;
+            height: 600px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+        img{
+            width: 600px;
+        }
+        .img_list li{
+            position: absolute;
+        }
+        .pointer{
+            position: absolute;
+            left: 10px;
+            bottom: 20px;
+        }
+        .pointer a{
+            width: 10px;
+            height: 10px;
+            background-color: rgb(180, 180, 180);
+            border-radius: 50%;
+            float: left;
+            margin: 0 3px;
+            background-clip: content-box;
+            border: 2px solid transparent;
+
+        }
+        .pointer .active,.pointer a:hover{
+            border: 2px rgb(170, 167, 167) solid;
+            background-color: aliceblue;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="img_list">
+        <li>
+            <a href="">
+                <img src="./练习图片素材/10.PNG" alt="">
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <img src="./练习图片素材/12.PNG" alt="">
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <img src="./练习图片素材/8.PNG" alt="">
+            </a>
+        </li>
+        <div class="pointer">
+            <a class="active" href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+        </div>
+    </ul>
+</body>
+
+</html>

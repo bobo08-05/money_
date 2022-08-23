@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            text-decoration: underline red dashed;
+            /* 
+                text-decoration 设置文本修饰
+                    可选值:
+                        none 什么都没有 
+                        underline 下划线 
+                        line-through 删除线 
+                        overline 上划线
+            */
+        }
+
+        .box2{
+            width: 100px;
+
+            /* 
+                white-space  设置网页如何处理空白
+                    可选值：
+                    normal 正常
+                    nowrap 不换行
+                    pre 保留空白（不用实体都可以使空格、换行正常显示）
+            */
+            white-space: nowrap;
+            overflow: hidden;
+            /* 
+                text-overflow 设置超出文本如何显示
+                    可选值
+                    ellipsis  以三个点省略号显示
+            */
+            text-overflow: ellipsis;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        今天天气真不错！hello
+    </div>
+    <div class="box2">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis quod eligendi laborum libero omnis voluptates id eveniet itaque inventore asperiores cum, vitae modi soluta accusantium quia velit quos ullam magnam.
+    </div>
+</body>
+</html>
