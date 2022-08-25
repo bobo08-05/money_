@@ -26,7 +26,14 @@
             width: 98%;
             margin: 0 auto;
             font-size: 14px;
-            overflow: hidden;
+
+        }
+
+        .nav::after {
+            content: "";
+            display: block;
+            visibility: hidden;
+            clear: both;
         }
 
         .nav_left {
@@ -132,6 +139,7 @@
         .individual_list:hover .individual {
             display: block;
         }
+
         .logo img {
             display: block;
             margin: 0 auto;
