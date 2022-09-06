@@ -1,0 +1,53 @@
+.box{
+    .box1{
+        color: #000;
+        &:hover{
+            color: aqua;
+        }
+    }
+    >.box2{
+        color: antiquewhite;
+    }
+    &:hover{
+        color: red;
+    }
+    div &{
+        color: gold;
+    }
+}
+.button{
+    &-ok{
+        width: 100px;
+    }
+    &-no{
+        width: 200px;
+    }
+    &-clink{
+        width: 300px;
+    }
+    &-active{
+        width: 400px;
+    }
+}
+
+
+.p1{
+    width: 100px;
+    height: 100px;
+}
+.p2:extend(.p1){
+    color: green;
+}
+.p3{
+    display: inline-block;
+    margin: 0 auto;    
+    &:extend(.p1);
+}
+
+.p4(){
+    display: inline-block;
+    margin: 0 auto; 
+}
+.p5{
+    .p4();
+}

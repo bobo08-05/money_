@@ -1,0 +1,26 @@
+.box {
+  width: 100px;
+  height: 100px;
+}
+.box .box1 {
+  width: 50px;
+}
+.box .box1 .box1-1 {
+  width: 20px;
+}
+.box .box2 {
+  width: 50px;
+}
+.change {
+  width: 100px;
+  height: 100px;
+  background-color: #fba;
+}
+.box5 {
+  width: 100px;
+  height: 100px;
+}
+.box6 {
+  width: 300px;
+  height: 300px;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .clock{
+            width: 300px;
+            height: 300px;
+            border: 2px solid black;
+            border-radius: 50%;
+            position: relative;
+        }
+        .clock div{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin:auto;
+        }
+        .hour_wrapper{
+            width: 50%;
+            height: 50%;
+            animation: clock 240s linear infinite;
+        }
+        .hour_wrapper .hour{
+            width: 5px;
+            height: 50%;
+            background-color: black;
+            margin: 0 auto;
+        }
+        .min_wrapper{
+            width: 50%;
+            height: 70%;
+            animation: clock 20s steps(60) infinite;
+        }
+        .min_wrapper .min{
+            width: 3px;
+            height: 50%;
+            background-color: black;
+            margin: 0 auto;
+        }
+        .sec_wrapper{
+            width: 50%;
+            height: 90%;
+            animation: clock 10s steps(60) infinite;
+        }
+        .sec_wrapper .sec{
+            width: 1px;
+            height: 50%;
+            background-color: red;
+            margin: 0 auto;
+        }
+        @keyframes clock{
+            from{
+                transform: rotateZ(0deg);
+            }
+            to{
+                transform: rotateZ(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="clock">
+        <div class="hour_wrapper">
+            <div class="hour"></div>
+        </div>
+        <div class="min_wrapper">
+            <div class="min"></div>
+        </div>
+        <div class="sec_wrapper">
+            <div class="sec"></div>
+        </div>
+    </div>
+</body>
+</html>

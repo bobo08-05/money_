@@ -1,0 +1,35 @@
+.box{
+    width: 100px;
+    height: 100px;
+    .box1{
+        width: 50px;
+        .box1-1{
+            width: 20px;
+        }
+    }
+    .box2{
+        width: 50px;
+
+    }
+}
+//指定变量
+@a:100px;
+@b:#fba;
+@c:box5;
+.change{
+    width: @a;
+    height: @a;
+    background-color: @b;
+}
+.@{c}{
+    width: @a;
+    height: @a;
+}
+@d:200px;
+@d:300px;
+.box6{
+    width: @d;
+    //使用$+属性名可以引用该属性的值
+    height: $width;
+}
+

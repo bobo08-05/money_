@@ -1,0 +1,26 @@
+//混合函数   在混合函数中可以直接设置变量
+//使用@参数名:具体值  设置默认值
+.test(@w:100px,@h:200px,@bg-color:gold){
+    width: @w;
+    height: @h;
+    background-color: @bg-color;
+}
+div {
+    //调用时，变量需要按顺序传入参数
+    // .test(100px,200px,red);
+
+
+    //以下写法可以不用按顺序
+    //.test(@bg-color:green,@w:100px,@h:100px)
+
+    .test(200px);
+    &:hover{
+        //darken 使颜色加深
+        background-color: darken(gold,10%)
+    }
+}
+p{
+    .test();
+    //average 取两个颜色的平均值（只适用于颜色相关）
+    background-color: average(red, green);
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html{
+            perspective: 800px;
+        }
+        body{
+            background-color: gray;
+            border: 1px solid black;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: #bfa;
+            margin: 100px auto;
+            transition: 2s;
+            backface-visibility: hidden;
+        }
+        body:hover .box{
+        
+            transform: perspective(800px) rotateY(45deg) translateX(100px);
+            /* transform: perspective(800px) translateX(100px) rotateY(45deg); */
+            
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

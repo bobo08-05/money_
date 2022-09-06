@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 450px;
+            background-image: url(./练习图片素材/动画练习.jpg);
+            animation:run 1s steps(3);
+        }
+        @keyframes run{
+            form{
+                background-position: 0 0;
+            }
+            to{
+                background-position: 600px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

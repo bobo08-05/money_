@@ -1,0 +1,44 @@
+.box .box1 {
+  color: #000;
+}
+.box .box1:hover {
+  color: aqua;
+}
+.box > .box2 {
+  color: antiquewhite;
+}
+.box:hover {
+  color: red;
+}
+div .box {
+  color: gold;
+}
+.button-ok {
+  width: 100px;
+}
+.button-no {
+  width: 200px;
+}
+.button-clink {
+  width: 300px;
+}
+.button-active {
+  width: 400px;
+}
+.p1,
+.p2,
+.p3 {
+  width: 100px;
+  height: 100px;
+}
+.p2 {
+  color: green;
+}
+.p3 {
+  display: inline-block;
+  margin: 0 auto;
+}
+.p5 {
+  display: inline-block;
+  margin: 0 auto;
+}
