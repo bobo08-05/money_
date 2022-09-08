@@ -1,0 +1,150 @@
+.topbar {
+  width: 980px;
+  line-height: 41px;
+  margin: 0 auto;
+
+  // background-color: rebeccapurple;
+  .topbar_wrapper {
+    display: flex;
+    justify-content: space-between;
+    height: 41px;
+
+    .topbar_left {
+      position: relative;
+
+      .ost_logo {
+        position: absolute;
+        width: 130px;
+        height: 41px;
+        padding-left: 20px;
+        z-index: 9999;
+      }
+
+      .ost_bgd {
+        // vertical-align: top;
+        height: 41px;
+        margin-left: 150px;
+
+        img {
+          height: 100%;
+        }
+
+        &:hover {
+          +.spr_pic {
+            display: block;
+          }
+        }
+      }
+
+      .spr_pic {
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: none;
+        z-index: 1;
+      }
+    }
+
+    .topbar_right {
+      padding-right: 25px;
+      position: relative;
+
+      .aa {
+        margin-right: 20px;
+
+        &::before {
+          content: '';
+          background: url(./images/topbar-icon.png);
+          // background-color: red;
+          width: 30px;
+          height: 30px;
+          position: absolute;
+          left: -30px;
+          top: 5px;
+          background-position-x: -30px;
+        }
+
+        &:hover {
+          color: #ff4e00;
+        }
+      }
+
+      .rank {
+        float: right;
+        position: relative;
+      }
+
+
+    }
+  }
+}
+.rank_show {
+  width: 700px;
+  height: 386px;
+  background-color: #ff4e00;
+  position: absolute;
+  right: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  display: none;
+
+  .rank_list_wrapper {
+    width: 224px;
+    background-color: aquamarine;
+
+    .rank_list {
+      .rank_list_item{
+        width: 200px;
+        // height: 16px;
+        // line-height: 16px;
+        // margin-bottom: 24px;
+        position: relative;
+        // overflow: hidden;
+
+        .rank_img_show {
+          position: absolute;
+          top: 0;
+          height: 90px;
+          // overflow: hidden;
+          img {
+            width: 200px;
+          }
+        }
+      }
+    }
+  }
+
+  // & > div:last-child{
+  //   align-self: start;
+  //   background-color: gold;
+  // }
+}
+
+.main{
+  background-image: url(./images/网页背景.jpg);
+  background-repeat: no-repeat;
+  background-position: center top;
+  width: 100%;
+  height: 1300px;
+  margin-top: 2px;
+  .nav{
+    width: 1300px;
+    height: 84px;
+    background-color: rgba(0, 0, 0, .8);
+    h1 a{
+      display: block;
+      position: absolute;
+      width: 200px;
+      height: 54px;
+      margin-top: 15px;
+      background-image: url(./images/logo-h1.png);
+    }
+    .nav_main{
+      width: 890px;
+      padding-left: 250px;
+      background-color: #ff4e00;
+    }
+  }
+}

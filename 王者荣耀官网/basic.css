@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 14px;
+    color: #333;
+}
+body{
+    font:14px/1.5"Microsoft YaHei",Tahoma,"simsun",sans-serif;
+}
+a{
+    text-decoration: none;
+    color: #363636;
+}
+.clearfix::after,.clearfix::before{
+    content: "";
+    clear: both;
+    display: table;
+}
