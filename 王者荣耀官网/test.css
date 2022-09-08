@@ -1,1 +1,179 @@
-#root .nav{display:flex;justify-content:space-between;margin:0 auto;box-sizing:border-box;width:980px;height:41px;position:relative}#root .nav .nav_right{height:100%;display:flex}#root .nav .nav_right .nav_right_logo{z-index:2}#root .nav .nav_right .nav_right_logo a{display:block;width:150px;height:100%;background-image:url("images/logo_black.png");background-size:65%, auto;background-position:center;background-repeat:no-repeat}#root .nav .nav_right .nav_right_des{width:230px;height:100%}#root .nav .nav_right .nav_right_des:hover+.nav_right_des_show_image{display:block}#root .nav .nav_right .nav_right_des_show_image{position:absolute;top:0px;display:none}#root .nav .nav_left{display:flex;justify-content:space-between;align-items:center;width:260px;height:100%;line-height:41px;font-size:16px}#root .nav .nav_left div{flex-grow:3}#root .nav .nav_left div:nth-of-type(2):hover+.rank{display:flex}#root .nav .nav_left::before{content:"";font:1;background-image:url(images/topbar-icon.png);width:30px;height:30px;background-position-x:-30px;transform:translateX(20%);flex-grow:1}#root .nav .nav_left .rank{display:flex;justify-content:space-between;background:#faf6f6;position:absolute;top:41px;right:0px;width:707px;box-sizing:border-box;padding-left:35px}#root .nav .nav_left .rank .rank_item{display:flex;flex-direction:column}#root .nav .nav_left .rank .rank_item .rank_title{display:flex;justify-content:space-between;margin-bottom:10px}#root .nav .nav_left .rank .rank_item .rank_title .rank_title_name{font-weight:700;font-size:14px}/*# sourceMappingURL=./test.css.map */
+#root .nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  box-sizing: border-box;
+  width: 980px;
+  height: 41px;
+  position: relative;
+}
+#root .nav .nav_right {
+  height: 100%;
+  display: flex;
+}
+#root .nav .nav_right .nav_right_logo {
+  z-index: 2;
+}
+#root .nav .nav_right .nav_right_logo a {
+  display: block;
+  width: 150px;
+  height: 100%;
+  background-image: url("images/logo_black.png");
+  background-size: 65%, auto;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#root .nav .nav_right .nav_right_des {
+  width: 230px;
+  height: 100%;
+}
+#root .nav .nav_right .nav_right_des:hover + .nav_right_des_show_image {
+  display: block;
+}
+#root .nav .nav_right .nav_right_des_show_image {
+  position: absolute;
+  top: 0px;
+  display: none;
+}
+#root .nav .nav_left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 260px;
+  height: 100%;
+  font-size: 16px;
+}
+#root .nav .nav_left .nav_left_grow {
+  flex-grow: 3;
+  line-height: 41px;
+}
+#root .nav .nav_left .nav_left_grow .rank {
+  justify-content: space-between;
+  background: #faf6f6;
+  position: absolute;
+  top: 41px;
+  right: 0px;
+  width: 707px;
+  box-sizing: border-box;
+  padding-left: 35px;
+}
+#root .nav .nav_left .nav_left_grow .rank .rank_item {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 10px 0;
+}
+#root .nav .nav_left .nav_left_grow .rank .rank_item .rank_title {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 50px;
+}
+#root .nav .nav_left .nav_left_grow .rank .rank_item .rank_title .rank_title_name {
+  font-weight: 700;
+  font-size: 14px;
+}
+#root .nav .nav_left .nav_left_grow .rank .rank_item .rank_list .rank_list_item {
+  margin-top: 10px;
+}
+#root .nav .nav_left .nav_left_grow .rank .rank_item .rank_list .rank_list_item .game {
+  display: flex;
+  position: relative;
+  padding-bottom: 20px;
+}
+#root .nav .nav_left .nav_left_grow .rank .rank_item .rank_list .rank_list_item .game .num {
+  z-index: 3;
+  width: 16px;
+  height: 16px;
+  background-color: red;
+  text-align: center;
+  line-height: 16px;
+  font-weight: 600;
+  font-size: 12px;
+  color: white;
+}
+#root .nav .nav_left .nav_left_grow .rank .rank_item .rank_list .rank_list_item .game .game_name {
+  font-size: 12px;
+  margin-left: 5px;
+  height: 16px;
+  line-height: 16px;
+}
+#root .nav .nav_left .nav_left_grow .rank .rank_item .rank_list .rank_list_item .game .game_nav {
+  position: absolute;
+  display: flex;
+  height: 25px;
+  width: 200px;
+  background: #1d1b1b;
+  z-index: 4;
+  line-height: 25px;
+  justify-content: space-between;
+  bottom: 0px;
+  background-color: rgba(0, 0, 0, 0.6);
+  align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+#root .nav .nav_left .nav_left_grow .rank .rank_item .rank_list .rank_list_item .game .game_nav p {
+  font-size: 16px;
+  color: #f9f5f5;
+}
+#root .nav .nav_left .nav_left_grow .rank .rank_item .rank_list .rank_list_item .game .game1_img {
+  display: none;
+}
+#root .nav .nav_left .nav_left_grow .rank .rank_item .rank_list .rank_list_item .game .game2_img {
+  display: none;
+}
+#root .nav .nav_left .nav_left_grow .rank .rank_item .rank_list .rank_list_item .game1:hover {
+  height: 80px;
+}
+#root .nav .nav_left .nav_left_grow .rank .rank_item .rank_list .rank_list_item .game1:hover .num {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#root .nav .nav_left .nav_left_grow .rank .rank_item .rank_list .rank_list_item .game1:hover .game1_img {
+  display: block;
+  width: 200px;
+  height: 80px;
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#root .nav .nav_left .nav_left_grow .rank .rank_item .rank_list .rank_list_item .game1:hover .game1_img img {
+  width: 100%;
+  height: 100%;
+}
+#root .nav .nav_left .nav_left_grow .rank .rank_item .rank_list .rank_list_item .game2:hover {
+  height: 80px;
+}
+#root .nav .nav_left .nav_left_grow .rank .rank_item .rank_list .rank_list_item .game2:hover .num {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#root .nav .nav_left .nav_left_grow .rank .rank_item .rank_list .rank_list_item .game2:hover .game2_img {
+  display: block;
+  width: 200px;
+  height: 80px;
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#root .nav .nav_left .nav_left_grow .rank .rank_item .rank_list .rank_list_item .game2:hover .game2_img img {
+  width: 100%;
+  height: 100%;
+}
+#root .nav .nav_left .nav_left_grow:hover .rank {
+  display: flex;
+}
+#root .nav .nav_left::before {
+  content: "";
+  font: 1;
+  background-image: url(images/topbar-icon.png);
+  width: 30px;
+  height: 30px;
+  background-position-x: -30px;
+  transform: translateX(20%);
+  flex-grow: 1;
+}
