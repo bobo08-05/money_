@@ -1,6 +1,6 @@
 .topbar {
   width: 980px;
-  line-height: 41px;
+  height: 41px;
   margin: 0 auto;
 
   // background-color: rebeccapurple;
@@ -46,8 +46,11 @@
     }
 
     .topbar_right {
-      padding-right: 25px;
+      padding-right: 10px;
       position: relative;
+      display: flex;
+      height: 41px;
+      line-height: 41px;
 
       .aa {
         margin-right: 20px;
@@ -70,81 +73,225 @@
       }
 
       .rank {
-        float: right;
         position: relative;
-      }
 
+        a {
+          display: block;
+          height: 41px;
 
-    }
-  }
-}
-.rank_show {
-  width: 700px;
-  height: 386px;
-  background-color: #ff4e00;
-  position: absolute;
-  right: 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: flex-start;
-  display: none;
+          &:hover {
+            +.rank_show {
+              display: flex;
+            }
+          }
 
-  .rank_list_wrapper {
-    width: 224px;
-    background-color: aquamarine;
+          .iconfont {
+            // font-size: 24px !important;
+            font-weight: bold;
+            opacity: .2;
+          }
+        }
 
-    .rank_list {
-      .rank_list_item{
-        width: 200px;
-        // height: 16px;
-        // line-height: 16px;
-        // margin-bottom: 24px;
-        position: relative;
-        // overflow: hidden;
-
-        .rank_img_show {
+        .rank_show {
+          display: none;
+          width: 707px;
+          // height: 500px;
+          background-color: #fafafa;
           position: absolute;
-          top: 0;
-          height: 90px;
-          // overflow: hidden;
-          img {
+          right: 0;
+          flex-wrap: wrap;
+          justify-content: flex-end;
+          z-index: 99;
+
+          &:hover {
+            display: flex;
+          }
+
+          .rank_list_wrapper {
             width: 200px;
+            line-height: 20px;
+            margin-left: 35px;
+
+            .rank_title {
+              line-height: 40px;
+              margin-bottom: 10px;
+
+              a {
+                display: flex;
+
+                h3 {
+                  padding-right: 60px;
+                }
+
+                .iconfont {
+                  font-size: 30px !important;
+                  opacity: .2;
+                }
+              }
+
+            }
+
+            .rank_list {
+              width: 200px;
+
+              .rank_list_item {
+                width: 100%;
+                margin-bottom: 15px;
+                position: relative;
+                display: flex;
+
+                .rank_name {
+                  margin-left: 25px;
+                }
+
+                .rank_img_show {
+                  display: none;
+                  position: absolute;
+                  top: 0;
+                  width: 200px;
+                  height: 90px;
+
+                  img {
+                    width: 200px;
+                    height: 90px;
+                  }
+
+                  .shadow {
+                    display: none;
+                    width: 200px;
+                    height: 30px;
+                    background-color: rgba(0, 0, 0, .7);
+                    position: absolute;
+                    top: 60px;
+                    display: flex;
+
+                    a {
+                      display: block;
+                      width: 50%;
+                      height: 100%;
+                      text-align: center;
+                      line-height: 30px;
+                      color: #fff;
+                      position: relative;
+
+                      span {
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        color: #fff;
+
+                      }
+                      .download_icon{
+                        display: none;
+                        width: 100px;
+                        height: 30px;
+                        position: absolute;
+                        top: 0;
+                        background-image: url(./images/topbar-icon.png);
+                        background-position: -75px;
+                        background-size: 160% 100%;
+                      }          
+                      img {
+                        width: 100%;
+                        height: 100%;
+                      }
+                      &:hover{
+                        span{
+                          display: none;
+                        }
+                        .download_icon{
+                          display: block;
+                        }
+                      }
+                    }
+                  }
+
+                }
+
+                .num{
+                  width: 16px;
+                  height: 16px;
+                  position: absolute;
+                  text-align: center;
+                  line-height: 16px;
+                  background-color: #c62828;
+                  color: #fff;
+                }
+
+                .four {
+                  background-color: #ccc;
+                }
+              }
+
+              .active {
+                height: 80px;
+
+                .img1_1 {
+                  display: block;
+                }
+              }
+
+              li:nth-of-type(1):hover {
+                display: flex;
+                height: 90px;
+
+                .img1_1 {
+                  display: block;
+                }
+              }
+
+              li:nth-of-type(2):hover {
+                display: flex;
+                height: 90px;
+
+                .img1_2 {
+                  display: block;
+                }
+              }
+
+              li:nth-of-type(3):hover {
+                display: flex;
+                height: 90px;
+
+                .img1_3 {
+                  display: block;
+                }
+              }
+
+              li:nth-of-type(4):hover {
+                display: flex;
+                height: 90px;
+
+                .img1_4 {
+                  display: block;
+                }
+              }
+
+              li:nth-of-type(5):hover {
+                display: flex;
+                height: 90px;
+
+                .img1_5 {
+                  display: block;
+                }
+              }
+
+            }
+          }
+
+          // & > div:last-child{
+          //   align-self: start;
+          //   background-color: gold;
+          // }
+        }
+        .rank_show_btn:hover{
+          .rank_show{
+            display: flex;
           }
         }
       }
-    }
-  }
 
-  // & > div:last-child{
-  //   align-self: start;
-  //   background-color: gold;
-  // }
-}
 
-.main{
-  background-image: url(./images/网页背景.jpg);
-  background-repeat: no-repeat;
-  background-position: center top;
-  width: 100%;
-  height: 1300px;
-  margin-top: 2px;
-  .nav{
-    width: 1300px;
-    height: 84px;
-    background-color: rgba(0, 0, 0, .8);
-    h1 a{
-      display: block;
-      position: absolute;
-      width: 200px;
-      height: 54px;
-      margin-top: 15px;
-      background-image: url(./images/logo-h1.png);
-    }
-    .nav_main{
-      width: 890px;
-      padding-left: 250px;
-      background-color: #ff4e00;
     }
   }
 }

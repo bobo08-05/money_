@@ -1,0 +1,162 @@
+.main {
+ background-image: url(./images/网页背景.jpg);
+ background-repeat: no-repeat;
+ background-position: center top;
+ background-size: 149% 85%;
+ width: 100%;
+ height: 1300px;
+ margin-top: 1px;
+
+ .nav {
+  // width: 1300px;
+  height: 84px;
+  background-color: rgba(0, 0, 0, .8);
+  display: flex;
+  position: relative;
+
+  h1 a {
+   display: block;
+   position: absolute;
+   width: 200px;
+   height: 54px;
+   margin-top: 16px;
+   background-image: url(./images/logo-h1.png);
+  }
+
+  .nav_main {
+   width: 850px;
+   padding-left: 228px;
+   // background-color: #ff4e00;
+   display: flex;
+
+   .nav_main_item {
+    box-sizing: border-box;
+    width: 115px;
+    height: 84px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #c9c9dd;
+
+    a {
+     font-size: 18px;
+     padding-top: 10px;
+     padding-bottom: 6px;
+     color: #c9c9dd;
+     display: block;
+    }
+
+    p {
+     font-size: 12px;
+     color: #858792;
+     transform: scale(0.95);
+    }
+
+    &:hover {
+     background: url(./images/雪碧图.png) no-repeat;
+
+     a,
+     p {
+      color: #e4b653;
+     }
+    }
+   }
+
+  }
+
+  .login_wrapper {
+   display: flex;
+   align-items: center;
+
+   .login_logo {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 1px solid #e4b653;
+    margin-right: 2px;
+   }
+
+   .login {
+    color: #858792;
+    margin-left: 5px;
+
+    a {
+     color: #fff;
+     font-size: 16px;
+     line-height: 25px;
+     display: block;
+
+    }
+   }
+  }
+  .drop_nav {
+   position: absolute;
+   top: 84px;
+   width: 100%;
+   background-color: rgba(0, 0, 0, .7);
+   box-sizing: content-box;
+   border-top: 1px solid black;
+   display: none;
+ 
+   .drop_nav_list {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+ 
+    li {
+     width: 115px;
+ 
+     a{
+      display: block;
+      width: 100%;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      color: #c9c9dd;
+ 
+      span {
+       display: inline-block;
+       width: 16px;
+       height: 16px;
+       font-size: 12px;
+       text-align: center;
+       line-height: 16px;
+       background-color: #de1212;
+       color: #fff;
+       border: 1px solid rgb(26, 26, 26);
+       border-radius: 50%;
+       box-shadow: 0 0 10px rgb(15, 15, 15);
+      }
+      
+      .grow{
+       display: inline-block;
+       width: 20px;
+       height: 20px;
+       border-radius: 50%;
+       background-color: transparent;
+       vertical-align: middle;
+       background-image: url(./images/topbar-icon-g.png);
+       background-position: -35px -6px;
+      }
+      &:hover{
+       // text-decoration: 1px solid #ff4e00;
+       text-decoration: underline;
+       color: #f3c258;
+      }
+     }
+    }
+    
+   }
+   &:hover{
+    display: block;
+   }
+  }
+  &:hover{
+   .drop_nav{
+    display: block;
+   }
+  }
+ }
+
+}
