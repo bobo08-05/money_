@@ -7,12 +7,26 @@
  height: 1300px;
  margin-top: 1px;
 
+ // 背景跳转
+ .bg_a {
+  position: absolute;
+  top: 128px;
+  left: 45px;
+  // background-color: #de1212;
+  width: 1200px;
+  height: 460px;
+  z-index: 3;
+
+ }
+
+ // 导航栏
  .nav {
   // width: 1300px;
   height: 84px;
   background-color: rgba(0, 0, 0, .8);
   display: flex;
   position: relative;
+  z-index: 5;
 
   h1 a {
    display: block;
@@ -23,6 +37,7 @@
    background-image: url(./images/logo-h1.png);
   }
 
+  // 导航栏中部
   .nav_main {
    width: 850px;
    padding-left: 228px;
@@ -65,6 +80,7 @@
 
   }
 
+  // 导航登录部分
   .login_wrapper {
    display: flex;
    align-items: center;
@@ -90,6 +106,8 @@
     }
    }
   }
+
+  // 二级导航
   .drop_nav {
    position: absolute;
    top: 84px;
@@ -98,23 +116,23 @@
    box-sizing: content-box;
    border-top: 1px solid black;
    display: none;
- 
+
    .drop_nav_list {
     display: flex;
     justify-content: center;
     margin-top: 16px;
- 
+
     li {
      width: 115px;
- 
-     a{
+
+     a {
       display: block;
       width: 100%;
       height: 30px;
       line-height: 30px;
       text-align: center;
       color: #c9c9dd;
- 
+
       span {
        display: inline-block;
        width: 16px;
@@ -128,8 +146,8 @@
        border-radius: 50%;
        box-shadow: 0 0 10px rgb(15, 15, 15);
       }
-      
-      .grow{
+
+      .grow {
        display: inline-block;
        width: 20px;
        height: 20px;
@@ -139,24 +157,205 @@
        background-image: url(./images/topbar-icon-g.png);
        background-position: -35px -6px;
       }
-      &:hover{
+
+      &:hover {
        // text-decoration: 1px solid #ff4e00;
        text-decoration: underline;
        color: #f3c258;
       }
      }
     }
-    
+
    }
-   &:hover{
+
+   &:hover {
     display: block;
+
    }
   }
-  &:hover{
-   .drop_nav{
+
+  &:hover {
+   .drop_nav {
     display: block;
    }
   }
  }
 
+ // 轮播资讯栏
+ .news_wrapper{
+  width: 604px;
+  height: 342px;
+  background-color: #cd974b;
+  .swiper{
+   display: flex;
+   // transform: translateX(-90px);
+  }
+ }
+}
+
+// 浮窗
+.fixed_bar {
+ position: relative;
+ pointer-events: none;
+ width: 254px;
+ height: 494px;
+ background: url(./images/浮窗背景.png) no-repeat top left;
+ position: fixed;
+ top: 30px;
+ right: 0;
+ z-index: 3;
+
+ .f_dj {
+  width: 165px;
+  height: 145px;
+  background: url(./images/妲己.png);
+  margin: 0 auto;
+
+  h3 {
+   position: absolute;
+   top: 35px;
+   left: 58px;
+   width: 90px;
+   line-height: 1.5;
+   color: #62401b;
+   // background-color: #e4b653;
+  }
+ }
+
+ .fixed_list {
+  position: absolute;
+  width: 117px;
+  height: 289px;
+  margin-left: 100px;
+  z-index: 9;
+  pointer-events: auto;
+
+  li {
+   width: 100%;
+   height: 38px;
+   margin-top: 1px;
+   background-color: #e4b653;
+  }
+
+  .download_qrcode {
+   height: 132px;
+   background: url(./images/按钮雪碧图.png) no-repeat;
+   background-position: -243px 0;
+   background-size: 360px 569px;
+
+   img {
+    width: 107px;
+    height: 107px;
+    display: block;
+    padding-top: 2px;
+    margin: 0 auto;
+    border-radius: 2px;
+   }
+  }
+
+  & li:nth-of-type(2) {
+   background: url(./images/按钮雪碧图.png) no-repeat;
+   background-position: -243px -134px;
+   background-size: 360px 569px;
+
+   &:hover {
+    background-position: -243px -174px;
+
+    .show1 {
+     display: block;
+    }
+   }
+  }
+
+  & li:nth-of-type(3) {
+   background: url(./images/按钮雪碧图.png) no-repeat;
+   background-position: -122px -120px;
+   background-size: 360px 569px;
+   
+   &:hover {
+    background-position: -122px -240px;
+
+    .show2 {
+     display: block;
+    }
+   }
+  }
+
+  & li:nth-of-type(4) {
+   background: url(./images/按钮雪碧图.png) no-repeat;
+   background-position: -122px -161px;
+   background-size: 360px 569px;
+   &:hover {
+    background-position: -122px -201px;
+
+    .show3 {
+     display: block;
+    }
+   }
+  }
+
+  & li:nth-of-type(5) {
+   background: url(./images/按钮雪碧图.png) no-repeat;
+   background-position: -122px 0px;
+   background-size: 360px 569px;
+   &:hover {
+    background-position: -122px -42px;
+
+    .show4 {
+     display: block;
+    }
+   }
+  }
+
+  .qrcode_show {
+   // box-sizing: border-box;
+   width: 115px;
+   height: 146px;
+   background-color: rgba(0, 0, 0, .7);
+   border: 1px solid #e4b653;
+   box-shadow: 0 0 3px #e4c072;
+   display: none;
+
+   img {
+    height: 100px;
+    width: 100px;
+    display: block;
+    margin: 5px auto;
+   }
+
+   p {
+    height: 17px;
+    width: 100%;
+    font-size: 12px;
+    color: #cd974b;
+    text-align: center;
+
+    span {
+     font-size: 12px;
+     color: #dcdcdc;
+    }
+   }
+  }
+
+  .show1 {
+   position: absolute;
+   top: 75px;
+   right: 120px;
+  }
+  .show2 {
+   position: absolute;
+   top: 115px;
+   right: 120px;
+  }
+  .show3 {
+   position: absolute;
+   top: 155px;
+   right: 120px;
+  }
+  .show4 {
+   position: absolute;
+   top: 195px;
+   right: 120px;
+  }
+ }
 }
