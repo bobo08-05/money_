@@ -7,6 +7,8 @@
 }
 body{
     font:14px/1.5"Microsoft YaHei",Tahoma,"simsun",sans-serif;
+    min-width: 1280px;
+    color: #323235;
 }
 a{
     text-decoration: none;
