@@ -8,6 +8,7 @@ body{
  font-family: PingFangSC-Regular,sans-serif,PingFangSC-Light,sans-serif,"Microsoft YaHei",arial;
  color: #666;
  outline: none;
+ background-image: url(../imgs/背景图.jpg);
 }
 a{
  text-decoration: none;

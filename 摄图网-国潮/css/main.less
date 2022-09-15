@@ -1,0 +1,194 @@
+.banner {
+ width: 100%;
+ height: 560px;
+ background: url(../imgs/thetide-banner.jpg) no-repeat center top;
+ background-size: auto 560px;
+}
+
+.mainer_wrapper {
+ width: 1200px;
+ margin: 0 auto;
+
+ .mainer_topbar {
+  li {
+   background: url(../imgs/thetide-icon.png) no-repeat;
+   width: 282px;
+   height: 171px;
+   text-align: center;
+   margin-right: 24px;
+   float: left;
+   position: relative;
+   transition: all .3s;
+
+   .mainer_topbar_nav {
+    a {
+     display: inline-block;
+     font-size: 18px;
+     width: 72px;
+     height: 32px;
+     line-height: 32px;
+     color: #fff;
+
+     &:hover {
+      color: #E02020;
+     }
+    }
+   }
+
+   p {
+    font-size: 24px;
+    color: #fff;
+    padding: 20px 0 28px 0;
+    position: relative;
+
+    &::before {
+     content: '';
+     width: 95px;
+     height: 8px;
+     background: url(../imgs/thetide-icon.png) no-repeat -292px -81px;
+     position: absolute;
+     bottom: 18px;
+     left: 100px;
+    }
+   }
+
+   i {
+    position: absolute;
+    width: 78px;
+    height: 34px;
+    background: url(../imgs/thetide-icon.png) no-repeat -291px -36px;
+    bottom: -18px;
+    right: -48px;
+    z-index: 1;
+   }
+
+   &:hover {
+    transform: translateY(-10px);
+   }
+  }
+
+  & li:last-child {
+   margin: 0;
+
+   .mainer_topbar_nav {
+    margin-top: -10px;
+
+    a {
+     width: 63px;
+     line-height: 1.25;
+    }
+
+    img {
+     width: 50px;
+     height: 50px;
+     border-radius: 50%;
+    }
+   }
+  }
+ }
+
+ .mainer_rol_title {
+  padding: 76px 0 40px 0;
+  text-align: center;
+
+  p {
+   font-size: 16px;
+   color: #ACBFDC;
+   letter-spacing: 2.4px;
+  }
+
+  >span {
+   display: block;
+   height: 84px;
+  }
+ }
+
+ .mainer_rol {
+  .rol_cont {
+   a {
+    display: block;
+    position: relative;
+    width: 384px;
+    height: 230px;
+    float: left;
+    margin: 0 24px 24px 0;
+   }
+
+   span {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 16px;
+    color: #fff;
+    height: 40px;
+    line-height: 40px;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 0 18px;
+   }
+  }
+
+  .fl {
+   float: left;
+
+   .rol_cont_swiper {
+    width: 792px;
+    height: 484px;
+    display: flex;
+    overflow: hidden;
+    margin: 0 24px 24px 0;
+
+    .swiper_wrapper {
+     width: 1500px;
+     display: flex;
+     animation: swiper 5s linear infinite alternate;
+
+     a {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+     }
+    }
+   }
+  }
+
+  .fr {
+   float: right;
+   width: 384px;
+
+   img {
+    width: 384px;
+    height: 230px;
+   }
+  }
+ }
+
+ .rol1_til {
+  span {
+   background: url(../imgs/thetide-icon.png) no-repeat 345px -182px;
+  }
+ }
+
+ .rol2_til {
+  span {
+   background: url(../imgs/thetide-icon.png) no-repeat 345px -280px;
+  }
+ }
+}
+
+@keyframes swiper {
+ 0% {
+  transform: translateX(0px);
+ }
+
+ 45% {
+  transform: translateX(0px);
+ }
+
+ 55% {
+  transform: translateX(-792px);
+ }
+
+ 100% {
+  transform: translateX(-792px);
+ }
+}
