@@ -3,12 +3,17 @@
  padding: 0;
  list-style: none;
 }
+html{
+ overflow-y: scroll;
+}
 body{
+ /* width: 100vw; */
  font-size: 14px;
  font-family: PingFangSC-Regular,sans-serif,PingFangSC-Light,sans-serif,"Microsoft YaHei",arial;
  color: #666;
  outline: none;
- background-image: url(../imgs/背景图.jpg);
+ background:url(../imgs/背景图.jpg);
+ overflow: hidden;
 }
 a{
  text-decoration: none;
