@@ -1,0 +1,288 @@
+/* 弹性 */
+.flex {
+  display: flex;
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-row-reverse {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.flex-column {
+   display: flex;
+   flex-direction: column;
+}
+.flex-column-reverse {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.wrap {
+ flex-wrap: wrap;
+}
+
+.nowrap {
+  flex-wrap: nowrap;
+}
+
+.wrap-reverse{
+  flex-wrap: wrap-reverse;
+}
+
+.justify-center {
+  justify-content: center;
+}
+.justify-start {
+  justify-content: flex-start;
+}
+.justify-end {
+  justify-content: flex-end;
+}
+.justify-around {
+  justify-content: space-around;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.justify-evenly {
+  justify-content: space-evenly;
+}
+
+.align-center {
+  align-content: center;
+}
+.align-start {
+  align-content: flex-start;
+}
+.align-end {
+  align-content: flex-end;
+}
+.align-around {
+  align-content: space-around;
+}
+.align-between {
+  align-content: space-between;
+}
+.align-evenly {
+  align-content: space-evenly;
+}
+
+.items-center {
+  align-items: center;
+}
+.items-start {
+  align-items: flex-start;
+}
+.items-end {
+  align-items: flex-end;
+}
+.items-baseline {
+  align-items: baseline;
+}
+
+
+.self-center {
+  align-self: center;
+}
+.self-auto {
+  align-self: auto;
+}
+.self-end {
+  align-self: flex-end;
+}
+.self-start {
+  align-self: flex-start;
+}
+.self-basline {
+  align-self: baseline;
+}
+
+.order1 {
+  order: 1;
+}
+.order2 {
+  order: 2;
+}
+.order3 {
+  order: 31;
+}
+.order1 {
+  order: 3;
+}
+.order4 {
+  order: 4;
+}
+.order5 {
+  order: 5;
+}
+
+.grow1 {
+  flex-grow: 1;
+}
+.grow2 {
+  flex-grow: 2;
+}
+.grow3 {
+  flex-grow: 3;
+}
+.grow4 {
+  flex-grow: 4;
+}
+.grow5 {
+  flex-grow: 5;
+}
+
+.shrink1 {
+  flex-shrink: 1;
+}
+.shrink2 {
+  flex-shrink: 2;
+}
+.shrink3 {
+  flex-shrink: 3;
+}
+.shrink1 {
+  flex-shrink: 4;
+}
+.shrink1 {
+  flex-shrink: 5;
+}
+
+/* 网格 */
+.grid {
+  display: grid;
+}
+
+.grid-column {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+/* 设置网格行 */
+.grid-row {
+  display: grid;
+  grid-template-rows: repeat(12, 1fr);
+}
+
+/* 设置网格先填列 dense密集模式 */
+.auto-column-dense {
+  grid-auto-flow: column dense;
+}
+.auto-column {
+  grid-auto-flow: column;
+}
+
+/* 设置网格先填行 dense密集模式*/
+.auto-row-dense {
+  grid-auto-flow: row dense;
+}
+.auto-row {
+  grid-auto-flow: row;
+}
+
+.col-12 {
+  grid-column: span 12;
+}
+.col-11 {
+  grid-column: span 11;
+}
+.col-10 {
+  grid-column: span 10;
+}
+.col-9 {
+  grid-column: span 9;
+}
+.col-8 {
+  grid-column: span 8;
+}
+.col-7 {
+  grid-column: span 7;
+}
+.col-6 {
+  grid-column: span 6;
+}
+.col-5 {
+  grid-column: span 5;
+}
+.col-4 {
+  grid-column: span 4;
+}
+.col-3 {
+  grid-column: span 3;
+}
+.col-2 {
+  grid-column: span 2;
+}
+.col-1 {
+  grid-column: span 1;
+}
+.row-12 {
+  grid-row: span 12;
+}
+.row-11 {
+  grid-row: span 11;
+}
+.row-10 {
+  grid-row: span 10;
+}
+.row-9 {
+  grid-row: span 9;
+}
+.row-8 {
+  grid-row: span 8;
+}
+.row-7 {
+  grid-row: span 7;
+}
+.col-6 {
+  grid-row: span 6;
+}
+.col-5 {
+  grid-row: span 5;
+}
+.col-4 {
+  grid-row: span 4;
+}
+.col-3 {
+  grid-row: span 3;
+}
+.col-2 {
+  grid-row: span 2;
+}
+.col-1 {
+  grid-row: span 1;
+}
+
+
+.justify-items-center {
+  justify-items: center;
+}
+.justify-items-start {
+  justify-items: start;
+}
+.justify-items-end {
+  justify-items: end;
+}
+.justify-items-baseline {
+  justify-items: baseline;
+}
+
+.justify-self-center {
+  justify-self: center;
+}
+.justify-self-start {
+  justify-self: start;
+}
+.justify-self-end {
+  justify-self: end;
+}
+.justify-self-baseline {
+  justify-self: baseline;
+}
+
+
+
