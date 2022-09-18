@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+
+ <!--JS代码是依据从上到下的顺序依次执行 -->
+ 
+ <!-- 可以将js代码写在script标签里 -->
+ <script>
+  alert("我是script标签中的代码")
+ </script>
+
+ <!-- 
+  可以将js写在外部js文件里面，使用script标签引入
+  写在外部文件中可以在不同的网页中使用，也可以利用浏览器的缓存机制
+
+  script标签一旦用来引入外部JS文件了，就不能写入内部JS代码了，即使写入了浏览器也会忽略，可以再使用script标签写入内部JS代码
+ -->
+ <script src="./JS编写位置.js"></script>
+</head>
+<body>
+ <!-- 可以将JS代码编写到标签的onclick属性中  点击后代码才会执行-->
+  <button onclick="alert('讨厌，你点我干嘛')">点我一下</button>
+
+ <!-- 可以将JS代码写在a标签的href属性中  点击a标签 js代码才会执行-->
+  <a href="javascript:alert('让你点你就点！！');">你再点我一下</a>
+</body>
+</html>

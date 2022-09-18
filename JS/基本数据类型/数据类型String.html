@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+ <script>
+   /*
+   数据类型指的就是字面量的类型在JS中一共有六种数据类型
+    string 字符串 
+    Number 数值 
+    Boolean 布尔值 
+    Null 空值
+    Undefined 未定义 
+    Object 对象
+    
+    其中String Number Boolean Null Undefined属于基本数据类型
+    而Obiect属于引用数据类型
+   */
+
+   // String 类型需要用双引号或者单引号引起来   但是单引号和双引号不能混用
+  var str="hello"
+   alert(str);
+
+   /*
+   在字符串中，我们可以使用/当做转义字符，当表示一些特殊字符的时候可以用/转义
+
+   /" 表示“
+   /' 表示'
+   /n 表示换行
+   /t 表示一个制表符
+   // 表示/
+   */
+  var str1="我说：“今天，天气真不错”"
+  //输出变量str1的值
+  document.write(str1)
+
+  //输出字面量str1
+  document.write("str1")
+
+  // var 声明变量，相同变量只用声明一次
+  var s=1
+      s=3
+      s=4
+ // 变量值谁在最后一个谁有效
+     alert(s)
+ </script>
+</head>
+<body>
+ 
+</body>
+</html>
