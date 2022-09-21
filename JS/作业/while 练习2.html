@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+ <script>
+
+
+//判断输入的值是否合法
+   while(true){
+    var score = prompt("请输入正确的成绩");
+    if(score >= 0 && score <= 100){
+     break;
+    }
+    alert("请输入有效的成绩")
+   }
+
+   if(score > 100 || score <0 || isNaN(score)){
+    document.write("输入错误");
+   }else{
+    if(score == 100){
+    document.write("奖励一辆BMW");
+   }else if(score >= 80){
+    document.write("奖励一台iPhone14");
+   }else if(score >= 60){
+    document.write("奖励一本参考书");
+   }else{
+    document.write("什么奖励也没有");
+   };
+   }
+
+ </script>
+</head>
+<body>
+ 
+</body>
+</html>

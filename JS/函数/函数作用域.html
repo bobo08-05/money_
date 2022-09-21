@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+ <script>
+
+  /*
+    函数作用域
+
+    -调用函数时创建函数作用域，函数执行完毕以后，函数作用域销毁
+    每调用一次函数就会创建一个新的函数作用域，他们之间是互相独立的
+
+    - 在函数作用域中可以访问到全局作用域的变量
+      在全局作用域中无法访问到函数作用域的变量
+    
+    - 当在函数作用域操作一个变量时，它会先在自身作用域中寻找，如果有就直接使用
+      如果没有则向上一级作用域中寻找，直到找到全局作用域，
+      如果全局作用域中依然没有找到，则会报错ReferenceError
+    -
+    在函数中要访问全局变量可以使用window对象
+
+
+  */
+
+  var a = 10;
+  function fun(){
+   console.log(a);//10 函数作用域可以访问全局作用域
+   /*
+     在函数作，用域也有声明提前的特性，
+     使用var关键字声明的变量，会在函数中所有的代码执行之前被声明
+     函数声明也会在函数中所有的代码执行之前执行
+
+   */
+   var a = 20;//undefined  var关键字会提前声明变量，打印之前声明了变量，变量的赋值在打印之后，所以打印的时候找不到变量的值
+   e = 20;//  如果没有var关键字，则默认该变量为全局变量
+  }
+  fun();
+  console.log(e);//20  等同于window.e
+
+  var b = 60;
+  function fun1(){
+   var b = 30;
+   function fun2(){
+    console.log(b);//30  就近的上一级中声明了b
+    console.log(a);//10  就近的上一级没有声明a,所以调用全局变量a
+    console.log(window.b);//60 可以使用window.使用全局变量
+   }
+  fun2();
+  }
+  fun1();
+  //定义形参就相当于给函数作用域声明了变量
+  function fun5(e){
+    alert(e);
+  }
+  fun5();//undefined
+
+ </script>
+</head>
+<body>
+ 
+</body>
+</html>

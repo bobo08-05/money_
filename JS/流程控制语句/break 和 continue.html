@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+
+    /*
+    
+    break关键字可以用来退出switch或循环语句
+    不能在if语句中使用break和continue
+     break关键字，会立即终止离他最近的那个循环语句
+  
+    */
+    for (var i = 0; i < 100; i++) {
+      console.log(i);
+      break;
+    }//0
+
+    for (var i = 0; i < 100; i++) {
+      if (i == 3) {
+        break;
+      }
+      console.log(i);
+    }//0 1 2 
+
+    /*
+     可以给循环语句创建一个名字来标识当前语句
+     语法：
+     名字：
+     for{
+  
+     }
+  
+     使用break语句时，可以在语句后加上循环语句的名字
+     这样可以终止指定的循环语句,而不是最近的
+  
+    */
+
+    // test:
+    // for(var i=0;i<5;i++){
+
+    //  console.log("外层循环"+i);
+
+    //   for(var n=0;n<5;n++){
+    //    if(n == 3){
+    //    break test;
+    //  }
+    //  console.log("内层循环"+n);
+
+    //  }
+    // }//0 1 2 
+
+    //continue语句可以用来跳过当次循环，它同样也是默认只对最近的循环语句起作用
+    // for(var i=0;i<5;i++){
+    //   if(i == 3){
+    //     continue;
+    //   }
+    //   console.log(i);
+    // }//0 1 2 4
+
+    //   for(var i=0;i<5;i++){
+
+    //   console.log("外层循环"+i);
+
+    //   for(var n=0;n<5;n++){
+    //     if(n == 3){
+    //     continue;
+    //   }
+    //   console.log("内层循环"+n);
+
+    //   }
+    //   }
+
+    ex:
+    for (var i = 0; i < 5; i++) {
+
+
+      for (var n = 0; n < 5; n++) {
+          continue ex;
+        console.log("内层循环" + n);
+
+      }
+      console.log("外层循环" + i);
+    }
+
+
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

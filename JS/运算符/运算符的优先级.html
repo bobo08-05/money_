@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+ <script>
+
+  /*
+   就和数学中一样，在JS中运算符也有优先级，比如:先乘除后加减
+       在JS中有一个运算符优先级的表，
+       在表中越靠上优先级越高，优先级越高越优先计算，如果优先级一样，则从左往右计算。
+       但是这个表我们并不需要记忆，如果遇到优先级不清楚可以使用()来改变优先级
+   */
+  var a=1,b=2,c=3;
+  var result = 1 || 2 && 3;//1
+      result =( 1 || 2 ) && 3;//3
+
+  document.write(result);
+
+ </script>
+</head>
+<body>
+ 
+</body>
+</html>

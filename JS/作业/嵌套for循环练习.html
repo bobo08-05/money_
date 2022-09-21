@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+ <script>
+
+  /*
+   测试如下的程序的性能
+     在程序执行前，开启计时器
+     console.time("计时器的名字")可以用来开启一个计时器
+     它需要一个字符串作为参数，这个字符串将会作为计时器的标识
+     在程序执行后，结束计时器
+     console.timeEnd("计时器的名字")可以用来结束一个计时器
+  */
+   
+  console.time("test");
+  for(var i=2;i<=10000;i++){
+   var s=true;
+   for(var n=2;n<i;n++){
+    if(i % n == 0){
+     s = false;
+     break;//不加break200ms   加break 25ms
+    }
+   }
+   if(s){
+    // document.write(i+"<br />");
+   }
+  }
+  console.timeEnd("test");
+
+ </script>
+
+</head>
+<body>
+ 
+</body>
+</html>

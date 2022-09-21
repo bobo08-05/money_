@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+ <script>
+  //sum需要定义在循环外，否则每循环一次都会定义一次
+  //方法1
+  // var sum = 0
+  // for (i = 1; i <= 100; i++) {
+
+  //  sum += (i % 2) ? i : 0
+  // }
+  // document.write(sum);
+
+  //方法2
+  // var sum = 0;
+  // for(i=0;i<=100;i++){
+  //  if(i % 2)  sum +=i;
+  // }
+  // document.write(sum);
+
+  //方法3
+  var sum = 0;
+  for(var i=1;i<=100;i++){
+
+   if(i % 2 !==0){
+    sum = sum + i;
+   }
+  }
+  document.write(sum);
+
+//sum 可以定义在for循环初始值那儿
+  for(var i=1, sum=0;i<=100;i++){
+
+   if(i % 2 !==0){
+    sum = sum + i;
+   }
+  }
+  document.write(sum);
+ </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

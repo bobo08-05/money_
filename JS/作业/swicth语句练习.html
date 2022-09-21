@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+ <script>
+
+  var a = +prompt('请输入你的成绩')
+
+  //方法一
+  switch(parseInt(a/10)){
+   case 10:
+   case 9:
+   case 8:
+   case 7:
+   case 6:
+    document.write("合格");
+    break
+   default:
+   document.write("不合格");
+  }
+
+  //方法二
+
+  switch(true){
+   case a >= 60:
+   document.write("合格");
+   break;
+   default:
+   document.write("不合格");
+  }
+
+ </script>
+</head>
+<body>
+ 
+</body>
+</html>

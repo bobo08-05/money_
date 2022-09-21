@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+ <script>
+
+  function fun(){
+
+   alert("我要开始执行函数了~~");
+   for (var i=0;i<5;i++){
+   if(i == 3){
+   //   使用break可以退出当前的循环
+
+    // break;//0 1 2 会执行结束alert语句
+
+   // //continue用于跳过当次循环
+    // continue;//0 1 2 4 会执行结束alert语句
+
+
+   // 使用return可以结束整个函数
+   return;//0 1 2 不会执行结束alert语句
+   }
+   console.log(i);
+
+   }
+   alert("我要结束执行函数了~~");
+
+  }
+  fun();
+
+  //返回值可以是任一数据类型
+  function fun1(){
+   
+   return 10;
+  }
+  var a =fun1();
+  console.log(a);//10
+
+  function fun2(){
+   var obj={name:"hhh"};
+   return obj;
+  }
+  var a =fun2();
+  console.log(a.name);//hhh
+
+  function fun3(){
+   function fun4(){
+    alert("hello");
+   }
+   // fun4();
+   //return fun4;//返回函数表达式
+   return fun4();//hello
+  }
+
+  fun3();//hello
+
+
+
+ </script>
+</head>
+<body>
+ 
+</body>
+</html>

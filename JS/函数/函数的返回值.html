@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+ <script>
+  /*
+    可以使用return来设置函数的返回值
+      语法:
+      return值
+      return后的值将会会作为函数的执行结果返回，
+      可以定义一个变量，来接收该结果
+
+      在函数中return后的语句都不会执行
+
+      如果return语句后不跟任何值就相当于返回一-个undefined,
+      如果函数中不写return,则也会返回undefined
+
+      return后可以跟任意数据类型
+
+      alert函数没有返回值
+  */
+  function fun(a, b, c) {
+   var d = a + b + c;
+   return d;
+   return "hello";//hello
+   return;//不写值，返回undefined
+   alert("123");//不会出来
+  }
+  //调用函数
+  // 变量result的值就是函数的执行结果
+  // 函数返回什么result的值就是什么
+
+  var result = fun(1, 2, 3);
+  console.log(result);//6
+
+ </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

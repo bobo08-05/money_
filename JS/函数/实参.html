@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+ <script>
+
+  // function fun(name,age,gender,address){
+  //  console.log("我是"+name+"，我今年"+age+"岁"+",我是"+gender+",我住在"+address);
+  // }
+  // fun("孙悟空",23,"男生","花果山");
+
+  //当我们参数过多时，可以将参数封装到对象中，然后通过对象传递
+
+  // function pre(o){
+  //  console.log("我是"+o.name+"，我今年"+o.age+"岁"+",我是"+o.gender+",我住在"+o.address);
+
+  // }
+  var obj = {
+    name:"猪八戒",
+    age:18,
+    gender:"男生",
+    address:"高老庄"
+  };
+  // pre(obj);
+
+  
+  function func(a){
+   console.log(a);
+   a(obj);
+  }
+
+  // func(pre); 
+
+  function s(e){
+   console.log(e)
+   return s;
+  }
+ // 2 Function Function Object 3 Function Object
+  var result2 = s(2);
+
+  console.log(result2); 
+  func(s); 
+  func(s(3));
+
+
+
+  function mianji(a){
+   i = a*a*3.14;
+   return i;
+  }
+
+  var result2 = s(2);
+  console.log(result2);
+
+  function mian(a){
+    console.log(a);
+  }
+    //使用函数对象,输出结果为函数表达式
+  mian(mianji);
+    //调用函数对象,相当于使用函数返回值
+  mian(mianji(2));
+
+ </script>
+</head>
+<body>
+ 
+</body>
+</html>

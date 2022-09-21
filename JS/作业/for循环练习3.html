@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    for (var i = 100; i < 1000; i++) {
+
+      var a = parseInt(i / 100)
+
+      var b = parseInt((i % 100) / 10)
+
+      var c = parseInt(i % 10)
+      //写法一
+     // var sum = a**3 + b**3 + c**3
+      //写法二
+      var sum = a*a*a +b*b*b + c*c*c
+
+      if (sum === i) document.write(i+"<br />");
+
+    }
+
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

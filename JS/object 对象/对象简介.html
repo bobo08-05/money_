@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+ <script>
+
+   /*
+    除了String  Number  Null Boolean  Undefined五种基本数据类型，其他都是Object类型
+    对象属于一种复合的数据类型，在对象中可以保存多个不同数据类型的属性。
+       对象的分类:
+       1.内建对象
+       -由ES标准中定义的对象，在任何的ES的实现中都可以使用
+       比如: Math string Number Boolean Function obiect...
+
+       2.宿主对象
+       - 由JS的运行环境提供的对象，目前来讲主要指由浏览器提供的对象 
+       - 比如 BOM(浏览器对象模型) DOM（文档对象模型）
+
+       3.自定义对象
+       - 由开发人员自己创建的对象
+   */
+
+   //创建对象
+
+   // 使用new关键字调用的函数，是构造函数constructor
+   // 构造函数是专门用来创建对象的函数
+   // 使用typeof检查一个对象时，会返回object
+  var obj = new Object();
+
+  /*
+   在对象中保存的值称为属性
+    向对象添加属性语法：
+    对象.属性名 = 值
+  */
+
+     obj.name="徐劲松";
+     obj.age = 23;
+     obj.gender = "男";
+
+     console.log(obj);
+     //读取对象中的属性，语法：对象.属性名 (如果读取对象中没有的属性，不会报错，而是返回undefined)
+     console.log(obj.age);//23
+
+     //修改对象属性
+     obj.gender = "女";
+     console.log(obj.gender);
+
+     //删除对象属性，delete 对象.属性名
+     delete obj.name;
+     console.log(obj);
+
+  /*
+    向对象中添加属性属性名:
+      - 对象的属性名不强制要求遵守标识符的规范
+      什么乱七八糟的名字都可以使用
+      - 但是我们使用是还是尽量按照标识符的规范去做
+  */
+   obj.var=1;
+   console.log(obj.var);
+
+   /*
+     如果要使用特殊的属性名，不能采用.的方式来操作需要使用另一种方式:
+        语法:对象["属性名"] = 属性值
+        读取时也需要采用这种方式
+        使用[]这种形式去操作属性，更加的灵活，
+        在[]中可以直接传递一个变量，这样变量值是多少就会读取那个属性
+   */
+  obj["123"]=123;
+  console.log(obj["123"]);//123
+  var n="123";
+  console.log(obj[n]);//123
+
+  // JS属性值可以是任一类型，甚至可以是一个对象
+  var obj2 = new Object();
+   obj2.name = "789";
+   obj.test = obj2;
+   
+   console.log(obj.test);
+  /*
+  
+    in 运算符
+      -"通过该运算符可以检查一个对象中是否含有指定的属性
+      如果有则返回true，没有则返回false 
+      - 语法:
+      "属性名"in 对象
+  
+  */
+   console.log("test2" in obj);//false
+   console.log("test" in obj);//true
+
+
+
+ </script>
+</head>
+<body>
+ 
+</body>
+</html>
