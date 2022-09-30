@@ -7,27 +7,20 @@
  <title>Document</title>
  <script>
 
-  for(var i=1;i<=9;i++){
-   
-   for(var n=1; n<=i;n++){
+  var arr = [1,2,2,3,2,2,3,1,4,5];
 
-    document.write("<span>"+n+"*"+i+"="+i*n+"</span>");
-
+  for(var i=0; i<arr.length;i++){
+   for(var n=i+1;n<arr.length;n++){
+    if(arr[i] == arr[n]){
+     arr.splice(n,1);
+     n--;
+    }
    }
-   document.write("<br />")
   }
- 
+  console.log(arr);
 
 
  </script>
-
- <style>
-
-  span{
-   display: inline-block;
-   width: 80px;
-  }
- </style>
 </head>
 <body>
  

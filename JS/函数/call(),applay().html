@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+ <script>
+   /*
+   call( )和apply( )
+        -这两个方法都是函数对象的方法，需要通过函数对象来调用
+        -当对函数调用call( )和apply( )都会调用函数执行
+        -在调用call( )和apply( )可以讲一个对象指定为第一个参数
+        此时这个对象将会成为函数执行时的this
+
+        -call( )方法可以将实参在对象之后依次传递
+        -app1y( )方法需要将实参封装到一个数组中统一传递
+
+
+        - this的情况: 
+           1.以函数形式调用时，thi s永远都是wi ndow
+           2.以方法的形式调用时，thi s是调用方法的对象
+           3.以构造函数的形式调用时，this是新创建的那个对象
+           4.使用call和apply调用时，this是指定的那个对象
+
+   */
+  function fun() {
+   console.log("hello");
+  }
+  fun.call();//hello
+  fun.apply();//hello
+  fun();//hello
+
+  function fun() {
+   //console.log(this);
+   console.log(this.name);
+  }
+  //var obj = {};
+  //fun();//[object Window]
+  //fun.call(obj);//[object Object]
+  //fun.apply(obj);//[object Object]
+  var obj = {
+   name: "obj",
+   Sayname:function(){
+    alert(this.name);
+   }
+  };
+  var obj2 = { name: "obj2" };
+  fun.call(obj);//obj
+  fun.apply(obj2);//obj2
+  obj.Sayname();//obj
+  obj.Sayname.apply(obj2);//obj2
+
+  function fun1(a,b){
+   console.log("a="+a);
+   console.log("b="+b);
+   console.log(this.name);
+  }
+
+  fun1.call(obj,1,2);//obj  a=1 b=2
+  //fun1.apply(obj,1,2);//报错
+  //apply需要将实参封装到数组中
+  fun1.apply(obj,[1,2]);//obj  a=1 b=2
+
+
+ </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

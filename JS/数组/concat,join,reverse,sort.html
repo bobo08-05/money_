@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+ <script>
+/*
+    concat( )可以连接两个或多个数组，并将新的数组返回
+        -该方法不会对，原数组产生影响
+
+*/
+    var arr = ['孙悟空', '猪八戒', '沙和尚'];
+    var arr1 =['蜘蛛精', '琵琶精', '白骨精'];
+    var arr3 =['唐僧', '牛魔王'];
+
+   var result = arr.concat(arr1);
+   console.log(arr);//['孙悟空', '猪八戒', '沙和尚']
+   console.log(result);//['孙悟空', '猪八戒', '沙和尚', '蜘蛛精', '琵琶精', '白骨精']
+   var result = arr.concat(arr1,arr3,"红孩儿");
+   console.log(result);//['孙悟空', '猪八戒', '沙和尚', '蜘蛛精', '琵琶精', '白骨精', '唐僧', '牛魔王', '红孩儿']
+
+  /*
+    join()
+        -该方法可以将数组转换为一个字符串
+        -该方法不会对原数组产生影响，而是将转换后的字符串作为结果返回
+        -在join( )中可以指定-个字符串作为参数，这个字符串将会成为数组中元素的连接符
+        如果不指定连接符，则默认使用，作为连接符
+  */
+  var arr = ['孙悟空', '猪八戒', '沙和尚'];
+  var result = arr.join();
+  console.log(result);//孙悟空,猪八戒,沙和尚
+  console.log(typeof result);//string
+  var result = arr.join("@");
+  console.log(result);//孙悟空@猪八戒@沙和尚
+
+  /*
+    reverse ( )
+      该方法用来反转数组( 前边的去后边，后边的去前边)
+      该方法会直接修改原数组
+  */
+  var arr = ['孙悟空', '猪八戒', '沙和尚'];
+    arr.reverse();
+    console.log(arr);// ['沙和尚', '猪八戒', '孙悟空']
+
+  /*
+      sort( )
+        可以用来对数组中的元素进行排序
+        -也会影响原数组，默认会按照Uni cod e编码进行排序
+
+        即使对于纯数字的数组，使用sort( )排序时，也会按照Uni code编码来排序，
+            所以对数字进排序时，可能会得到错误的结果。
+            我们可以自己来指定排序的规则
+            我们可以在sort( )添加一个回调函数，来指定排序规则，
+            回调函数中需要定义两个形参，
+            浏览器将会分别使用数组中的元素作为实参去调用回调函数
+            使用哪个元素调用不确定，但是肯定的是在数组中a一定在b前边
+
+            -浏览器会根据回调函数的返回值来决定元素的顺序，
+            浏览器将会分别使用数组中的元素作为实参去调用回调函数
+            使用哪个元素调用不确定，但是肯定的是在数组中a一定在b前边
+
+            浏览器会根据回调函数的返回值来决定元素的顺序，
+            如果返回一个大于0的值，则元素会交换位置
+            如果返回一个小于0的值，则元素位置不变
+            如果返回一个0，则认为两个元素相等，也不交换位置
+            -
+            如果需要升序排列，则返回a-b
+            如果需要降序排列，则返回b-a
+  */
+
+  var arr = ["b","c","e","d"];
+      arr.sort();
+      console.log(arr);//['b', 'c', 'd', 'e']
+      //即使对于纯数字的数组，使用sort( )排序时，也会按照Unicode编码来排序
+      arr =[1,3,4,2,11];
+      arr.sort();
+      console.log(arr);//[1, 11, 2, 3, 4]
+
+      arr =[8,6,5];
+      arr.sort(function(a,b){
+          return a-b;
+      });
+      console.log(arr);//[5, 6, 8]
+      arr =[8,6,5];
+      arr.sort(function(a,b){
+          return b-a;
+      });
+      console.log(arr);// [8, 6, 5]
+
+
+
+  
+ </script>
+</head>
+<body>
+ 
+</body>
+</html>

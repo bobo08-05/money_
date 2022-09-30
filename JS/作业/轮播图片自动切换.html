@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+ <script>
+
+  //使图片自动切换
+
+  window.onload = function () {
+   var arrImg = ["./练习图片/经典国潮4.jpg", "./练习图片/经典国潮5.jpg", "./练习图片/经典国潮6.jpg", "./练习图片/经典国潮7.jpg", "./练习图片/经典国潮8.jpg"]
+   var img = document.getElementsByTagName("img")[0];
+   var index = 0;//用变量储存索引值
+   //定义time变量，用来保存定时器的标识
+   var timer;
+   // setInterval(function(){
+   //  index++;
+
+   //  //判断当前索引是否大于最大索引
+   //  //写法一：
+   //  // if(index>=arrImg.length){
+   //  //  index=0;
+   //  // }
+
+   //  //写法二:
+   //  // index = index % arrImg.length;
+   //  index %= arrImg.length;
+
+   //  img.src=arrImg[index];
+
+   // },1000)
+
+
+   //点击切换、暂停
+   var btn = document.getElementById("btn");
+   var btn01 = document.getElementById("btn01");
+   btn.onclick = function () {
+    /*
+        目前，我们每点击一次按钮，就会开启一个定时器，
+        点击多次就会开启多个定时器，这就导致图片的切换速度过快，
+        并且我们只能关闭最后一次开启的定时器
+    */
+
+    //在开启定时器之前，需要将当前元素上的其他定时器关闭
+    clearInterval(timer);
+    timer = setInterval(function () {
+     index++;
+
+     //判断当前索引是否大于最大索引
+     //写法一：
+     // if(index>=arrImg.length){
+     //  index=0;
+     // }
+
+     //写法二:
+     // index = index % arrImg.length;
+     index %= arrImg.length;
+
+     img.src = arrImg[index];
+
+    }, 1000)
+   }
+
+   btn01.onclick = function () {
+    clearInterval(timer);
+   }
+  }
+
+ </script>
+</head>
+
+<body>
+ <img src="./练习图片/经典国潮4.jpg" alt="">
+ <button id="btn">开始切换</button>
+ <button id="btn01">停止切换</button>
+</body>
+
+</html>

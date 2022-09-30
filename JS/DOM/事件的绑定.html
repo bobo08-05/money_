@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+ <script>
+  window.onload=function(){
+   var btn = document.getElementById("btn");
+   /*
+      addEventListener()
+        -通过这个方法也可 以为元素绑定响应函数
+        参数:
+        1.事件的字符串，不要on
+        2.回调函数，当事件触发时该函数会被调用
+        3.是否在捕获阶段触发事件，需要-个布尔值，一般都传false
+        使用addEventListener( )可以同时为一个元素的相同事件同时绑定多个响应函数，
+        这样当事件被触发时，响应函数将会按照函数的绑定顺序执行
+        这个方法不支持IE8及以下的浏览器
+
+   */
+   btn.addEventListener("click",function(){
+    alert("1")
+   },false);
+   btn.addEventListener("click",function(){
+    alert("2")
+   },false)
+   /*
+      attachEvent( )
+         -在IE8中 可以使用attachEvent( )来绑定事件
+         -参数:
+         1.事件的字符串，要on
+         2.回调函数
+         这个方法也可以同时为一个事件绑定多个处理函数，
+         不同的是它是后绑定先执行，执行顺序和addEventListener( )相反
+
+   */
+  }
+ </script>
+</head>
+<body>
+   <button id="btn">按钮</button>
+</body>
+</html>

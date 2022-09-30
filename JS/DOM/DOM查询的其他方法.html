@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+ <script>
+  window.onload = function(){
+   //在document中有一个属性body,它保存的是body的引用
+   var body = document.body;
+
+   //document . documentElement保存的是html根标签
+   var html = document.documentElement;
+
+   //document.all代表页面中的全部元素
+   var all = document.all;
+   var all = document.getElementsByTagName("*");
+   console.log(all);//10
+
+   /*
+     根据元素的class属性值查询一组元素节点对象
+         getElementsByClassName( )可以根据class属性值获取一组元素节点对象，返回的是数组
+         但是该方法不支持IE8及以下的浏览器
+   */
+   var box = document.getElementsByClassName("box");
+   var box = document.querySelector(".box");
+   console.log(box.length);
+
+   /*
+      document . querySelector()
+         需要一个选择器的字符串作为参数，可以根据一个CSS选择器来查询一个元素节点对象
+         虽然IE8中没有getElementsByClassName()但是可以使用querySelector()代替
+         使用该方法总会返回唯一的一个元素，如果满足条件的元素有多个，那么它只会返回第一个
+   */
+   var div = document.querySelector(".box div");
+   console.log(div.innerHTML);
+   var box = document.querySelector(".box");
+   console.log(box.innerHTML);//我是第一个box
+
+   /*
+   document.querySelectorAll()
+     该方法和querySelector( )用法类似，不同的是它会将符合条件的元素封装到一个数组中返回
+        即使符合条件的元素只有一个，它也会返回数组
+   */
+  var box = document.querySelectorAll(".box")
+     console.log(box.length);//4
+  }
+  </script>
+</head>
+<body>
+  <div class="box">
+   我是第一个box
+   <div>我是BOX中的DIV</div>
+  </div>
+  <div class="box"></div>
+</body>
+</html>

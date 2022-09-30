@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+ <style>
+  #box1 {
+   width: 100px;
+   height: 100px;
+   background-color: yellowgreen;
+   margin-top: 20px;
+   padding: 10px;
+   border: 10px solid green;
+  }
+
+  #box2 {
+   padding: 100px;
+   background-color: orange;
+  }
+
+  #box4 {
+   width: 200px;
+   height: 300px;
+   background-color: gold;
+   overflow: auto;
+  }
+
+  #box5 {
+   width: 150px;
+   height: 600px;
+   background-color: blue;
+  }
+ </style>
+ <script>
+  window.onload = function () {
+   var box1 = document.getElementById("box1");
+   var btn1 = document.getElementById("btn1");
+   var box4 = document.getElementById("box4");
+   btn1.onclick = function () {
+    /*
+      clientWidth clientHeight
+         这两个属性可以获取元素的可见宽度和高度
+         这些属性都是不带px的，返回都是一个数字， 可以直接进行计算
+         会获取元素宽度和高度，包括内容区和内边距
+         这些属性都是只读的，不能修改
+    */
+    var res = box1.clientWidth;
+    console.log(res);//120   包含内容区、内边距
+
+    /*
+      offsetWidth  offsetHeight
+         -获取元素的整个的宽度和高度， 包括内容区、内边距和边框
+    */
+    var res = box1.offsetWidth;
+    console.log(res);//140   包含内容区、内边距、边框
+
+    /*
+      offsetParent
+         -可以用来获取当前元素的定位父元素
+         -会获取到离当前元素最近的开启了定位的祖先元素
+         -如果所有的祖先元素都没有开启定位，则返回body
+    */
+    var res = box1.offsetParent;
+    console.log(res.id);
+
+    /*
+       offsetLeft
+          -当前元素相对于其定位父元素的水平偏移量
+       offsetTop
+          -当前元素相对于其定位父元素的垂直偏移量
+    */
+    var res = box1.offsetLeft;
+    console.log(res);//100
+
+    /*
+      scrollWidth  scrollHeight
+      可以获取元素整个滚动区域的宽度和高度
+    */
+    console.log(box4.clientHeight);//300
+    console.log(box4.scrollHeight);//600
+
+    /*
+      scrollLeft
+       -可以获取水平滚动条滚动的距离
+      scrol1Top
+       -可以获取垂直滚动条滚动的距离
+
+      当满足scrollHeight - scrollTop == clientHeight
+      说明垂直滚动条滚动到底了
+      当满足scrollWidth - scrollLeft == clientWidth
+      说明水平滚动条滚动到底
+    */
+   console.log(box4.scrollTop);
+   }
+  }
+ </script>
+</head>
+
+<body>
+ <button id="btn1">读读读</button>
+ <br><br>
+ <div id="box4">
+  <div id="box5"></div>
+ </div>
+ <br><br>
+ <div id="box3" style="position: relative;">
+  <div id="box2" style="position: relative;">
+   <div id="box1"></div>
+  </div>
+ </div>
+</body>
+
+</html>

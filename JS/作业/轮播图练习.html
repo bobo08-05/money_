@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+ <style>
+  * {
+   margin: 0;
+   padding: 0;
+   list-style: none;
+  }
+
+  #outer {
+   width: 302px;
+   height: 190px;
+   padding: 20px 0;
+   margin: 50px auto;
+   background-color: #fba;
+   position: relative;
+   overflow: hidden;
+  }
+
+  #swiper {
+   /* width: 1168px; */
+   position: absolute;
+   left: 0;
+  }
+
+  #swiper li {
+   float: left;
+   margin: 0 10px;
+  }
+
+  #pointer {
+   position: absolute;
+   bottom: 5px;
+   left: 50%;
+   transform: translateX(-50%);
+  }
+
+  #pointer a {
+   float: left;
+   width: 10px;
+   height: 10px;
+   margin: 0 5px;
+   background-color: rgb(52, 254, 1);
+   opacity: 0.6;
+  }
+
+  #pointer a:hover {
+   background-color: black;
+  }
+ </style>
+ <script>
+
+  window.onload = function () {
+   var swiper = document.getElementById("swiper");
+   var arrImg = document.getElementsByTagName("img");
+   //设置swiper容器的宽度
+   swiper.style.width = 302 * arrImg.length + "px";
+
+   //设置变量保存allA的索引值
+   var index = 0;
+   var allA = document.getElementsByTagName("a");
+   allA[index].style.backgroundColor = "black";
+
+   //为所有的超链接设置单击响应函数
+   for (var i = 0; i < allA.length; i++) {
+    //给每个a添加专属的索引num
+    allA[i].num = i;
+    allA[i].onclick = function () {
+     //获取当前a的索引,并将它赋值给全局变量index
+     index = this.num;
+
+     //切换图片
+     move(swiper, -302 * index, "left", 30, function () { })
+
+      //调用设置a的方法
+      sitA();
+
+    };
+    
+   }
+   //开启自动切换
+   aotuChange();
+
+   //定义一个方法设置选中的a
+   function sitA() {
+
+    //判断当前索引是否为最后一个a
+    // if (index > arrImg.length - 1) {
+    //  index = 0;
+
+    //  //此时显示的是最后一张图片，而最后一张图片和第一张是一模一样的
+    //  //通过CSS将最后一张换成第一张
+    //  swiper.style.left = 0;
+    // }
+
+    //遍历所有的a
+    for (var i = 0; i < allA.length; i++) {
+
+     allA[i].style.backgroundColor = "";//将颜色设置为空避免影响hover效果
+
+    }
+    //选中的a，将其设置为黑色
+    allA[index].style.backgroundColor = "black";
+   }
+
+   var timer;
+
+   //创建一个函数开启自动切换
+   function aotuChange() {
+    timer = setInterval(function () {
+     //使索引自增
+     index++;
+
+     //判断index的值，当索引为最后一张的时候变为0
+     index %= arrImg.length;
+
+     move(swiper, -302 * index, "left", 30, function () { })
+
+     sitA();
+
+    }, 3000)
+   }
+  }
+
+ </script>
+ <script src="../tools.js"></script>
+</head>
+
+<body>
+ <div id="outer">
+  <ul id="swiper">
+   <li><img src="./练习图片/经典国潮4.jpg" alt=""></li>
+   <li><img src="./练习图片/经典国潮5.jpg" alt=""></li>
+   <li><img src="./练习图片/经典国潮6.jpg" alt=""></li>
+   <li><img src="./练习图片/经典国潮7.jpg" alt=""></li>
+   <li><img src="./练习图片/经典国潮8.jpg" alt=""></li>
+   <li><img src="./练习图片/经典国潮4.jpg" alt=""></li>
+  </ul>
+  <div id="pointer">
+   <a href="js:;"></a>
+   <a href="js:;"></a>
+   <a href="js:;"></a>
+   <a href="js:;"></a>
+   <a href="js:;"></a>
+  </div>
+ </div>
+</body>
+
+</html>

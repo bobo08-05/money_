@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+ <script>
+  function Person(name, age, address) {
+   this.name = name;
+   this.age = age;
+   this.address = address;
+  }
+  
+
+  var per = new Person("孙悟", 18, "水帘洞");
+  var per1 = new Person("猪八戒", 28, "高老庄");
+  // console.log(per);//person[name=孙悟空,age=18,address=水帘洞]
+
+
+  Person.prototype.toString = function(){
+   return "Person[name="+this.name+",age="+this.age+",address="+this.address+"]";
+  }
+
+
+  // var result = per.toString();
+  // console.log(result);//没改写toString 输出[Object Object]   改写后输出hello
+  // console.log(per.hasOwnProperty("toString"));//fales
+  // console.log(per.__proto__ .hasOwnProperty("toString"));//fales
+  // console.log(per.__proto__ .__proto__ .hasOwnProperty("toString"));//true
+  console.log(pre.toString());
+
+
+ </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

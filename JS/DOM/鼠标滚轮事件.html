@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+ <style>
+   #box{
+   width: 100px;
+   height: 100px;
+   background-color: #fba;
+   position: absolute;
+  }
+ </style>
+ <script>
+
+  window.onload =function(){
+   var box = document.getElementById("box");
+       box.onwheel = function(event){
+        event = event || window.event;
+        if(event.deltaY>0){
+         box.style.height=box.clientHeight - 10+"px"
+        }else{
+         box.style.height=box.clientHeight + 10+"px"
+        }
+
+        event.preventDefault();
+        // return false;
+       }
+  }
+
+ </script>
+</head>
+<body style="height: 1000px;">
+ <div id="box"></div>
+</body>
+</html>

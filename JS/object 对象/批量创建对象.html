@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+ <script>
+
+  function fun(name,age,address){
+   var obj = new Object();
+   obj.name=name;
+   obj.age=age;
+   obj.address=address;
+   obj.Sayname=function(){
+    alert("hello");
+   }
+   return obj;
+  }
+  var obj1 = fun("蜘蛛精",18,"蜘蛛洞");
+  var obj2 = fun("白骨精",19,"白骨洞");
+  var obj3 = fun("琵琶精",20,"琵琶洞");
+  console.log(obj1);
+  console.log(obj2);
+  console.log(obj3);
+  obj1.Sayname();//hello
+
+ </script>
+</head>
+<body>
+ 
+</body>
+</html>

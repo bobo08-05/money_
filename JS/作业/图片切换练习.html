@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+ <style>
+  div{
+   width: 300px;
+   margin: 0 auto;
+   padding: 10px;
+   background-color: rgb(235, 235, 235);
+   text-align: center;
+  }
+ </style>
+ <script>
+
+  window.onload = function(){
+
+   var prev = document.getElementById("prev");
+   var next = document.getElementById("next");
+   var imgArr = ["./练习图片/经典国潮1.jpg","./练习图片/经典国潮2.jpg","./练习图片/经典国潮3.jpg","./练习图片/经典国潮4.jpg","./练习图片/经典国潮5.jpg","./练习图片/经典国潮6.jpg"]
+   var index = 0;
+   var p = document.getElementsByTagName("p")[0];
+   p.innerHTML="一共有"+imgArr.length+"张，这是第"+(index+1)+"张";
+   prev.onclick = function(){
+    var img = document.getElementsByTagName("img")[0];
+
+    index--;
+    if(index<0){
+      index=imgArr.length-1;
+    }
+    img.src=imgArr[index] ;
+   p.innerHTML="一共有"+imgArr.length+"张，这是第"+(index+1)+"张";
+
+   }
+   next.onclick = function(){
+    var img = document.getElementsByTagName("img")[0];
+    index++;
+    if(index>imgArr.length-1){
+     index=0 
+    }
+    img.src=imgArr[index] ;
+   p.innerHTML="一共有"+imgArr.length+"张，这是第"+(index+1)+"张";
+
+   }
+  }
+
+ </script>
+</head>
+<body>
+   <div>
+    <p></p>
+    <img src="./练习图片/经典国潮1.jpg" alt="">
+    <br><br>
+    <button id="prev">上一张</button>
+    <button id="next">下一张</button>
+   </div>
+</body>
+</html>

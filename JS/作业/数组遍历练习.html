@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+ <script>
+
+  function Person(name,age){
+   this.name=name;
+   this.age=age;
+  };
+  var per =new Person("孙悟空",18);
+  var per2 =new Person("唐僧",28);
+  var per3 =new Person("蜘蛛精",8);
+  var per4 =new Person("白骨精",24);
+  var per5 =new Person("琵琶精",15);
+  
+  var perArr = [per,per2,per3,per4,per5]
+
+  function arrAdult(arr){
+    //创建一个数组
+    var arr = [];
+
+    //遍历数组，获取年龄数据
+    for(var i=0;i<perArr.length;i++){
+     var a =perArr[i];
+     var b =perArr[i].age;
+     if (b>=18){
+     arr.push(a);
+    }
+    }
+    //判断年龄是否大于18
+   
+
+    //返回数组
+    return arr;
+  }
+
+  var result = arrAdult(perArr);
+  console.log(result);
+  
+
+ </script>
+</head>
+<body>
+ 
+</body>
+</html>

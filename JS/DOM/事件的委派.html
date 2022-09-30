@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+ <script>
+  window.onload=function(){
+   var btn = document.getElementById("btn");
+   var ullist = document.getElementById("ullist")
+   btn.onclick=function(){
+    var li = document.createElement("li");
+    li.innerHTML="<a href='js:;'class='link'>新建超链接</a>";
+    ullist.appendChild(li);
+   }
+   //获取a
+   var allaA=document.getElementsByTagName("a");
+   // for(var i=0;i<allaA.length;i++){
+   //  allaA[i].onclick=function(){
+   //   alert("我是超链接")
+   //  }
+   // }
+   /*
+     事件的委派
+      -指将事件统绑定给元素的共同的祖先元素，这样当后代元素上的事件触发时，会一直冒泡到祖先元素
+      从而通过祖先元素的响应函数来处理事件。
+   */
+  /*
+     我们希望，只绑定一次事件，即可应用到多个的元素上，即使元素是后添加的
+     我们可以尝试将其绑定给元素的共同的祖先元素
+  */
+     ullist.onclick=function(event){
+      event = event ||window.event;
+      //target   event中的target表示的触发事件的对象
+      if(event.target.className == "link"){
+       alert("我是超链接")
+      }
+     }
+  }
+ </script>
+</head>
+<body>
+ <button id="btn">创建超链接</button>
+   <ul id="ullist">
+    <li><a href="js:;" class="link">超链接1</a></li>
+    <li><a href="js:;" class="link">超链接2</a></li>
+    <li><a href="js:;" class="link">超链接3</a></li>
+    <li><a href="js:;" class="link">超链接4</a></li>
+   </ul>
+</body>
+</html>

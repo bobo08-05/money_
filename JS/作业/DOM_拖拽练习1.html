@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+ <style>
+  #box{
+   width: 100px;
+   height: 100px;
+   background-color: #fba;
+   position: absolute;
+  }
+ </style>
+ <script>
+  /*
+    拖拽box1元素
+      -拖拽的流程
+      1.当鼠标在被拖拽元素上按下时，开始拖拽    onmousedown
+      2.当鼠标移动时被拖拽元素跟随鼠标移动      onmousemove
+      3.当鼠标松开时，被拖拽元素固定在当前位置  onmouseup
+  */
+ /*
+   提取一个专门用来设置拖拽的函数
+   参数:开启拖拽的元素
+ */
+ function drag(obj){
+  obj.onmousedown=function(event){
+event = event || window.event;
+//获取鼠标点击时的位置
+var ol = event.clientX - obj.offsetLeft;
+var ot = event.clientY - obj.offsetTop;
+
+//当鼠标移动时被拖拽元素跟随鼠标移动      onmousemove
+document.onmousemove=function(event){
+ event = event || window.event;
+ var x = event.clientX-ol;
+ var y = event.clientY-ot;
+
+ obj.style.left = x+"px";
+ obj.style.top = y +"px";
+}
+
+//当鼠标松开时，被拖拽元素固定在当前位置  onmouseup
+document.onmouseup=function(){
+ document.onmousemove = null;
+ document.onmouseup = null;
+}
+
+/*
+  当我们拖拽一一个网页中的内容时，浏览器会默认去搜索引擎中搜索内容，
+  此时会导致拖拽功能的异常，这个是浏览器提供的默认行为，
+  如果不希望发生这个行为，则可以通过return false来取消默认行为
+
+*/
+return false;
+}
+ }
+ window.onload = function(){
+  var box = document.getElementById("box");
+  var img = document.getElementById("img");
+     drag(box);
+     drag(img);
+ }
+ </script>
+</head>
+<body>
+ 我是一段文字
+ <div id="box"></div>
+ <img id="img" src="./练习图片/经典国潮7.jpg" alt="" style="position:absolute;">
+</body>
+</html>
